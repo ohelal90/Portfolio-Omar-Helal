@@ -1,0 +1,23 @@
+{
+  "name": "OmarHelal",
+  "version": "1.0.0",
+  "description": "Omar Helal,\r 27 years old avid sports fan\r have a family and two dogs\r I currently work for UniGroup Inc, as a Workstation Engineer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohelal90/Portfolio-Omar-Helal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ohelal90/Portfolio-Omar-Helal/issues"
+  },
+  "homepage": "https://github.com/ohelal90/Portfolio-Omar-Helal#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  }
+}
