@@ -1,4 +1,44 @@
+body {
+margin: 0;
+}
+
+#Navigation {   
+    background-color: lightskyblue
+}
+
+#Navigation > ul {
+    margin: 0;
+    list-style: none;
+    padding: 10;
+
+}
+
+#Navigation > ul > li {
+    margin: 0 40px 0 0;
+    display: inline;
+}
+
+
+#Header {
+    margin: 10px;
+    padding: 10px;
+    background-color: lightgreen
+}
+
+#Content {
+    margin: 10px;
+    padding: 10px;
+    background-color: lightpink
+}
+
+#Footer {
+    margin: 10px;
+    padding: 10px;
+    background-color: lightblue
+}
+
 .ChicagoBearsOrange  {
+    
     color: orangered;
 
 }
