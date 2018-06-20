@@ -3,8 +3,17 @@ margin: 0;
 }
 
 #Navigation {   
-    background-color: lightskyblue
+    background-color: lightskyblue;
+    position: fixed;
+    width:  100vw;
 }
+
+img {
+    width: 100%;
+    height: 10%;
+    max-width: 500px;
+}
+
 
 #Navigation > ul {
     margin: 0;
@@ -13,11 +22,37 @@ margin: 0;
 
 }
 
-#Navigation > ul > li {
+div.hotpink {
+    color: hotpink;
+
+}
+
+#navigation .container {
+    margin: 0 auto;
+
+}
+
+#Navigation li {
     margin: 0 40px 0 0;
     display: inline;
 }
 
+
+#content li:first-child   {
+    background-color:blue;
+}
+
+#content li :last-child {
+    background-color:grey;
+}
+
+#content li :nth-child(2) {
+    background-color: red
+}
+
+#content li:nth-child(3m) {
+    background-color: burlywood;
+}
 
 #Header {
     margin: 10px;
@@ -56,4 +91,11 @@ h2
 .bears {
 color:blue;
 
+}
+
+.container  {
+    margin: 0 auto  0   auto;
+    max-width: 760px;
+    width: 100%;
+    color: greenyellow;
 }
