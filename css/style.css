@@ -1,6 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Shrikhand');
 
-#navigation a + ul {
+h1 {
+    font-family: "Markazi Text", serif
+}
+
+.fa-github {
+    color: blue;
+}
+
+.fa-linkedin {
+    color:lightblue;
+}
+
+.fa-envelope-square {
+    color: aqua;
+}
+
+#navigation a ~ ul {
     background-color:pink;
     display: none;  
     position: absolute;
@@ -8,23 +24,29 @@
     right: 20px;
 }
 
-#navigation a:hover + ul {
-    display: block;
+#navigation a:hover ~ ul {
+    display: flex;
+    flex-direction: column;
 
 }
 
-#navigation a + ul:hover {
+#navigation a ~ ul:hover {
     display: block;
 }
 
 body {
-margin: 0;
+display: grid;
+grid-template-rows: min-content min-content auto min-content;
+grid-template-areas:
+    "navigation"
+    "header"
+    "content"
+    "footer";
+min-height: 100vh;
 }
 
 #navigation {   
-    background-color: lightskyblue;
-    position: fixed;
-    width:  100vw;
+    background-color:lightskyblue;
 }
 
 li :hover {
@@ -46,7 +68,9 @@ img {
 }
 
 #navigation > ul {
-    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     list-style: none;
     padding: 10;
 
@@ -64,7 +88,7 @@ div.hotpink {
 
 #navigation > ul > li {
     margin: 0 10px 0 0;
-    display: inline;
+
 }
 
 
@@ -123,7 +147,18 @@ color:blue;
     margin: 0 auto  0   auto;
     max-width: 760px;
     width: 100%;
-    color: greenyellow;
+
+
+}
+
+#footer {
+    margin: 0;
+    list-style: none;
+    padding: 10;
+    background: skyblue;
+    font-family: 'Shrikhand', cursive;
+
+
     
 }
 
@@ -135,20 +170,7 @@ color:blue;
     font-family: 'Shrikhand', cursive;
 
 }
-.container  {
-    margin: 0 auto  0   auto;
-    max-width: 760px;
-    width: 100%;
-    color: greenyellow;
-    
+
+#footer a {
+    text-decoration: none;
 }
-
-#footer {
-    margin: 0;
-    list-style: none;
-    padding: 10;
-    background: skyblue;
-    font-family: 'Shrikhand', cursive;
-
-}
-
