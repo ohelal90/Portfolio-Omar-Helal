@@ -19,7 +19,7 @@ h1 {
 #navigation a ~ ul {
     background-color:pink;
     display: none;  
-    position: absolute;
+    position: sticky;
     top: 20px;
     right: 20px;
 }
@@ -47,6 +47,8 @@ min-height: 100vh;
 
 #navigation {   
     background-color:lightskyblue;
+    position: sticky;
+    top: 10;
 }
 
 li :hover {
@@ -72,7 +74,7 @@ img {
     flex-direction: row;
     justify-content: space-around;
     list-style: none;
-    padding: 10;
+    padding: 0;
 
 }
 
@@ -173,4 +175,26 @@ color:blue;
 
 #footer a {
     text-decoration: none;
+}
+
+@media (min-width: 612px) {
+    body {
+       grid-template-columns: 150px auto;
+       grid-template-rows: min-content auto min-content; 
+       grid-template-areas:
+       "navigation header"
+       "navigation content"
+       "navigation footer";
+    
+    }
+
+    #navigation {
+        grid-area: navigation;
+    }
+
+    #navigation > ul {
+        flex-direction: column;
+        height: 50vh;
+    }
+    
 }
