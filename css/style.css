@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Shrikhand');
 
+#root {
+        display: grid;
+        grid-template-rows: min-content min-content auto min-content;
+        grid-template-areas:
+          "navigation"
+          "header"
+          "content"
+          "footer";
+        min-height: 100vh;
+  }    
+
 h1 {
     font-family: "Markazi Text", serif
 }
@@ -32,17 +43,6 @@ h1 {
 
 #navigation a ~ ul:hover {
     display: block;
-}
-
-body {
-display: grid;
-grid-template-rows: min-content min-content auto min-content;
-grid-template-areas:
-    "navigation"
-    "header"
-    "content"
-    "footer";
-min-height: 100vh;
 }
 
 #navigation {   
@@ -149,7 +149,7 @@ color:blue;
     margin: 0 auto  0   auto;
     max-width: 760px;
     width: 100%;
-
+    position: bottom;
 
 }
 

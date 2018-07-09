@@ -1,14 +1,17 @@
-var title = document.querySelector('h1');
+import Content from './src/Content';
+import Footer from './src/Footer';
+import Header from './src/Header';
+import Navigation from './src/Navigation';
+import greetUser from './src/greetUser';
 
-var greetUser = function greetUser(){
-    var userName = prompt('What is your name?');
 
-    if(userName !== ''){
-        title.textContent += '. Welcome, ' + userName;
-    }
-    else{
-        greetUser();
-    }
-};
+document
+    .querySelector('#root')
+    .innerHTML = `
+    ${Navigation}
+    ${Header}
+    ${Content}
+    ${Footer}
+  `;
 
 greetUser();
