@@ -1,5 +1,5 @@
 
-var greetUser = function greetUser(){
+function greetUser(){
     var greeting = document.querySelector('#greeting');
     var firstName = prompt('What is your first name?');
     var lastName = prompt('What is your last name?');
@@ -15,4 +15,6 @@ var greetUser = function greetUser(){
     else{
         greetUser();
     }
-};
+}
+
+export default greetUser;

@@ -9,7 +9,7 @@ document
     .querySelector('#root')
     .innerHTML = `
     ${Navigation}
-    ${Header}
+    ${Header()}
     ${Content}
     ${Footer}
   `;
