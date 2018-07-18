@@ -1,19 +1,28 @@
-export default `
-<div id="navigation">
-    <ul class="container">
-        <li>
-            <a href="Blog/">Blog</a>
-            <i class="fab fa-blogger"></i>
-        </li>
-        <li>
-            <a href="Projects/">Projects</a>
-            <i class="fas fa-project-diagram"></i>
-            <ul>
-                <li>First</li>
-                <li>Second</li>
-                <li>Third</li>
-            </ul>
-        </li>
-    </ul>
-</div>
-`;
+import { lowerCase } from 'lodash';
+
+console.log(lowerCase);
+
+function buildLinks(links){
+    var result = '';
+    var i = 0;
+
+    while(i < links.length){
+        result += `
+            <li>
+                <a href="/${lowerCase(links[i])}">${links[i]}</a>
+            </li>
+    `;
+        i++;
+    }
+
+    return result;
+}
+export default function Navigation(state){
+    return `
+    <div id="navigation">
+        <ul class="container">
+            ${buildLinks(state.links)}
+        </ul>
+    </div>   
+    `;
+}
