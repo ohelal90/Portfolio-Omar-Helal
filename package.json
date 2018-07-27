@@ -4,6 +4,7 @@
   "description": "Omar Helal,\r 27 years old avid sports fan\r have a family and two dogs\r I currently work for UniGroup Inc, as a Workstation Engineer.",
   "main": "index.js",
   "scripts": {
+    "build":"parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,7 @@
     "eslint": "^4.19.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "loadash": "^1.0.0",
     "lodash": "^4.17.10",
     "navi": "0.0.0",

@@ -3,22 +3,24 @@ import Footer from './src/Footer';
 import Header from './src/Header';
 import Navigation from './src/Navigation';
 import * as State from './store';
+import axios from 'axios';
 import Navigo from 'navigo';
+import { capitalize } from 'lodash';
 
 var root = document.querySelector('#root');
-var router = new Navigo();
+var router = new Navigo(location.origin);
 
-console.log(router);
+State.posts = [];
+
+axios('https://jsonplaceholder.typicode.com/posts').then(console.log);
 
 function render(state){
     var greetingContainer;
-    var links;
-    var i = 0;
 
     root.innerHTML = `
       ${Navigation(state)}
       ${Header(state)}
-      ${Content}
+      ${Content(state, State.posts)}
       ${Footer}
   `;
 
@@ -36,25 +38,30 @@ function render(state){
                   </div>
       `
         );
-
-    links = document.querySelectorAll('#navigation a');
-
-    while(i < links.length){
-        links[i].addEventListener(
-            'click',
-            (event) => {
-                var page = event.target.textContent;
-
-                event.preventDefault();
-
-                console.log(page);
-
-                render(state[page]);
-            }
-        );
-        i++;
-    }
+  
+    router.updatePageLinks();
 }
 
+function handleRoute(params){
+    var page = capitalize(params.page);
+    
+    console.log(params);
+    console.log(page);
+    
+    render(State[page]);
+}
 
-render(State['Home']);
+router
+    .on('/:page', handleRoute)
+    .on('/', () => handleRoute({ 'page': 'home' }))
+    .resolve();
+
+axios('https://jsonplaceholder.typicode.com/posts').then((response) => {
+    var params = router.lastRouteResolved().params;
+
+    State.posts = response.data;
+
+    if(params){
+        handleRoute(params);
+    }
+});
