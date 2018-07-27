@@ -4,11 +4,11 @@ import Header from './src/Header';
 import Navigation from './src/Navigation';
 import * as State from './store';
 import axios from 'axios';
-import Navigo from 'navigo';
+import navigo from 'navigo';
 import { capitalize } from 'lodash';
 
 var root = document.querySelector('#root');
-var router = new Navigo(location.origin);
+var router = new navigo(location.origin);
 
 State.posts = [];
 

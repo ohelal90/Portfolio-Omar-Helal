@@ -4,7 +4,7 @@
   "description": "Omar Helal,\r 27 years old avid sports fan\r have a family and two dogs\r I currently work for UniGroup Inc, as a Workstation Engineer.",
   "main": "index.js",
   "scripts": {
-    "build":"parcel build index.html",
+    "build": "parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/ohelal90/Portfolio-Omar-Helal#readme",
   "devDependencies": {
-    "eslint": "^4.19.1"
+    "eslint": "^4.19.1",
+    "parcel-bundler": "^1.9.7"
   },
   "dependencies": {
     "axios": "^0.18.0",
